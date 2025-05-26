@@ -1,0 +1,147 @@
+disabledAI = 1;
+
+
+class CfgFunctions
+{
+	class LND
+	{
+		class IEDD
+		{
+			class loadClutter {};
+			class newSector {};
+			class createIEDs {};
+			class createAmbush {};
+			class createClutter {};
+			class getRadius {};
+			class isVisible {};
+		};
+	};
+};
+
+class CfgDebriefing
+{
+	class Detonate
+	{
+		title = "Scenario Over";
+		subtitle = "Training Complete";
+		variable = "LND_iedd_ending";
+		picture = "b_Ordnance";
+		pictureColor[] = { 0.0, 0.3, 0.6, 1 };
+	};
+};
+
+
+class Params
+{
+	class TrainingIEDs
+	{
+		title = "Training IEDs - non-lethal, and can be reset";
+		texts[] = {"No", "Yes"};
+		values[] = {0,1};
+		default = 0;
+	};
+	
+	class Daytime
+	{
+		title = "Time of day";
+		texts[] = {"Morning","Noon","Evening","Midnight"};
+		values[] = {6,12,18,0};
+		default = 12;
+		function = "BIS_fnc_paramDaytime";
+	};
+
+	class AdvanceTime
+	{
+		title = "Time advances after each sector cleared";
+		texts[] = {"No", "Yes"};
+		values[] = {0,1};
+		default = 1;
+	};
+
+	class Weather
+	{
+		title = "Weather";
+		texts[] = {"Clear","Overcast","Rain","Storm"};
+		values[] = {0,70,90,100};
+		default = 70;
+		function = "BIS_fnc_paramWeather";
+	};
+
+	class AmbushChance
+	{
+		title = "Chance of Ambush";
+		texts[] = {"0%","5%", "10%", "25%","50%"};
+		values[] = {0,5,10,25,50};
+		default = 5;
+	};
+
+
+	class IEDTimer
+	{
+		title = "Activate IED countdown after the first wire is cut";
+		texts[] = {"No", "Yes", "Random"};
+		values[] = {0,1,2};
+		default = 2;
+	};
+
+	class IEDTimerValue
+	{
+		title = "IED countdown length";
+		texts[] = {"60s", "90s", "120s", "180s", "240s", "300s"};
+		values[] = {60,90,120,180,240,300};
+		default = 90;
+	};
+
+
+	class IEDsPerZone
+	{
+		title = "Max number of IEDs per player, per zone";
+		values[] = {1,2,3,5,10};
+		default = 1;
+	};
+
+
+	class IndicatorArrow
+	{
+		title = "IED Indicator - places an arrow over each IED";
+		texts[] = {"On", "Off"};
+		values[] = {1,0};
+		default = 0;
+	};
+
+
+	class MinesweeperItem
+	{
+		title = "Start with Minesweeper";
+		texts[] = {"Yes", "No"};
+		values[] = {1,0};
+		default = 1;
+	};
+
+	class AceMinesweeperItem
+	{
+		title = "Start with ACE Minesweeper";
+		texts[] = {"Yes", "No"};
+		values[] = {1,0};
+		default = 1;
+	};
+
+	class NVGItem
+	{
+		title = "Start with NVGs";
+		texts[] = {"Yes", "No"};
+		values[] = {1,0};
+		default = 1;
+	};
+
+	class TorchItem
+	{
+		title = "Start with Torch";
+		texts[] = {"Yes", "No"};
+		values[] = {1,0};
+		default = 1;
+	};
+
+
+	// class KeepTalkingAndNoOneExplodesMode
+};
