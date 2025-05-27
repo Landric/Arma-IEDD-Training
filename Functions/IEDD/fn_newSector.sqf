@@ -38,7 +38,7 @@ if ((["AdvanceTime", 1] call BIS_fnc_getParamValue) == 1 && {!isNil "LND_iedd_mi
 
 
 private "_pos";
-while { LND_iedd_IEDsRemaining <= 0 } do {
+while { LND_iedd_IEDsRemaining <= 0 || {_pos isEqualTo [0,0]} } do {
 
 	deleteMarker "LND_iedd_zone";
 	{ deleteVehicle _x; } forEach LND_iedd_createdClutter;

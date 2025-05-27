@@ -15,6 +15,8 @@ scriptName "LND\Functions\fn_createClutter.sqf";
 		[_pos] call LND_fnc_createClutter;
 */
 
+params ["_pos"];
+
 private _radius = call LND_fnc_getRadius;
 
 // Create clutter
